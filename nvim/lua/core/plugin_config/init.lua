@@ -1,0 +1,13 @@
+require("core.plugin_config.alpha")
+require("core.plugin_config.autopairs")
+-- i'm not really enjoying the autoformatter
+-- require("core.plugin_config.conform")
+-- require("core.plugin_config.everforest")
+-- require("core.plugin_config.gruvbox")
+-- require("core.plugin_config.kanagawa")
+require("core.plugin_config.harpoon")
+require("core.plugin_config.lazygit")
+require("core.plugin_config.lualine")
+require("core.plugin_config.nvim-tree")
+require("core.plugin_config.telescope")
+require("core.plugin_config.treesitter")
