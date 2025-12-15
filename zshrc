@@ -1,21 +1,12 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Powerlevel10k theme
 ZSH_THEME="bureau"
 
 # Plugins
 plugins=(
   git
   brew
-  zsh-nvm
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -76,15 +67,6 @@ if [ -f "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/
   ZSH_HIGHLIGHT_STYLES[command]="fg=${GRUVBOX_ORANGE_SOFT}"
 fi
 
-# NVM
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-export NVM_AUTO_USE=true
-export NVM_NO_USE=true
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Homebrew paths
 export PATH="/opt/homebrew/Cellar/pkgconf/2.5.1/bin:/opt/homebrew/opt/mysql-client/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
@@ -105,5 +87,3 @@ if command -v ng >/dev/null 2>&1; then
   source <(ng completion)
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
